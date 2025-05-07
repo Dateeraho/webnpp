@@ -3,7 +3,7 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      nodejs: 16  # Ensure you're using Node.js version 16
+      nodejs: 16
     commands:
       - echo "Installing custom Node.js version 16 ..."
       - n --no-preserve 16
@@ -14,9 +14,9 @@ phases:
       - echo "Listing current directory contents:"
       - ls -al
       - echo "Installing npm dependencies..."
-      - npm install  # Install all dependencies (including express)
-      - echo "Running app.js..."
-      - node app.js  # Run the app
+      - npm install
+      - echo "Running app.js in the background..."
+      - nohup node app.js &  # Run app in background to allow build to continue
   post_build:
     commands:
       - echo "Build completed successfully"
