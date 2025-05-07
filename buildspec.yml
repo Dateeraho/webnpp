@@ -7,11 +7,11 @@ phases:
     commands:
       - echo Installing dependencies...
       - npm install
+
   build:
     commands:
-      - echo Build started...
-      - node index.js
-
-artifacts:
-  files:
-    - '**/*'
+      - echo "Build started on $(date)"
+      - echo "Listing current directory contents:"
+      - ls -al
+      - echo "Running app.js..."
+      - node app.js
