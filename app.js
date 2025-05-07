@@ -7,5 +7,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(port, '0.0.0.0', () => {
-  console.log(`App is running on http://<public-ec2-ip>:${port}`);
+  console.log(`App is running on http://3.85.14.54:${port}`);
 });
